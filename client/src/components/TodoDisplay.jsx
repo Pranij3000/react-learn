@@ -21,7 +21,6 @@ export default function TodoDisplay({ todos, todosList }) {
 					todo.done = true;
 				}
 			}
-			console.log(item);
 		});
 	}
 
@@ -31,7 +30,7 @@ export default function TodoDisplay({ todos, todosList }) {
 				{todos.map((todo, index) => (
 					<div key={index} className="todo d-flex justify-content-between align-items-center">
 						<p onClick={() => handleComplete(todo)}>{todo.name}</p>
-						<button onClick={(e) => handleDelete(e, todo.name)}>delete</button>
+						<button onClick={() => handleDelete(todo)}>delete</button>
 					</div>
 				))}
 			</div>
