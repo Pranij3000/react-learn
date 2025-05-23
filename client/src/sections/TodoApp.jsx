@@ -1,5 +1,6 @@
 import "./todoapp.scss";
 import TodoForm from "../components/TodoForm.jsx";
+import TodoDisplay from "../components/TodoDisplay.jsx";
 
 import { useState } from "react";
 export default function TodoApp() {
@@ -8,7 +9,8 @@ export default function TodoApp() {
 		<>
 			<section className="todoapp">
 				<div className="container">
-					<TodoForm></TodoForm>
+					<TodoForm todos={todos} todosList={todosList}></TodoForm>
+					<TodoDisplay todos={todos}></TodoDisplay>
 				</div>
 			</section>
 		</>

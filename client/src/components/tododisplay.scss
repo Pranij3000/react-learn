@@ -1,0 +1,13 @@
+.todos-wrapper {
+	.todo {
+		width: 300px;
+		padding: 12px;
+		background: orange;
+		&:not(:last-child) {
+			margin-bottom: 16px;
+		}
+		p {
+			word-break: break-word;
+		}
+	}
+}
