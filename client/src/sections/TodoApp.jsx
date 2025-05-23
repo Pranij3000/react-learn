@@ -1,21 +1,16 @@
 import "./todoapp.scss";
+import TodoForm from "../components/TodoForm.jsx";
+
 import { useState } from "react";
 export default function TodoApp() {
-  const [todo, setTodo] = useState("");
-  return (
-    <>
-      <section className="todoapp">
-        <div className="container">
-          <div className="todoapp-form">
-            <form>
-              <div className="input-field-wrapper d-flex align-items-center justify-content-center">
-                <textarea value={todo}></textarea>
-                <button>Submit</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </section>
-    </>
-  );
+	const [todos, todosList] = useState([]);
+	return (
+		<>
+			<section className="todoapp">
+				<div className="container">
+					<TodoForm></TodoForm>
+				</div>
+			</section>
+		</>
+	);
 }
