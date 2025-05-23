@@ -10,7 +10,7 @@ export default function TodoApp() {
 			<section className="todoapp">
 				<div className="container">
 					<TodoForm todos={todos} todosList={todosList}></TodoForm>
-					<TodoDisplay todos={todos}></TodoDisplay>
+					<TodoDisplay todos={todos} todosList={todosList}></TodoDisplay>
 				</div>
 			</section>
 		</>
