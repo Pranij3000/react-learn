@@ -27,10 +27,9 @@ export default function TodoDisplay({ todos, todosList }) {
     <>
       <div className="todos-wrapper d-flex flex-column align-items-center">
         {todos.map((todo, index) => (
-          <div key={index} className={"todo d-flex justify-content-between align-items-center"}>
+          <div key={index} className={`todo d-flex justify-content-between align-items-center ${todo.done ? "completed" : ""}`}>
             <p onClick={() => handleComplete(todo)}>{todo.name}</p>
             <button onClick={(e) => handleDelete(e, todo)}>delete</button>
-            {console.log(todo.done)}
           </div>
         ))}
       </div>
