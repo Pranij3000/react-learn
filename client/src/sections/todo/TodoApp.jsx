@@ -1,7 +1,7 @@
 import "./todoapp.scss";
-import TodoForm from "../components/TodoForm.jsx";
-import TodoDisplay from "../components/TodoDisplay.jsx";
-import Counter from "../components/Counter.jsx";
+import TodoForm from "../../components/todo/TodoForm.jsx";
+import TodoDisplay from "../../components/todo/TodoDisplay.jsx";
+import Counter from "../../components/todo/Counter.jsx";
 
 import { useState } from "react";
 export default function TodoApp() {
