@@ -1,11 +1,11 @@
-import TttHeader from "./sections/ttt/TttHeader";
-import TttGame from "./sections/ttt/TttGame";
+import TttHeader from "./sections/tictactoe/TttHeader";
+import TttGame from "./sections/tictactoe/TttGame";
 
 export default function TicTacToe() {
-	return (
-		<>
-			<TttHeader></TttHeader>
-			<TttGame></TttGame>
-		</>
-	);
+  return (
+    <>
+      <TttHeader></TttHeader>
+      <TttGame></TttGame>
+    </>
+  );
 }
