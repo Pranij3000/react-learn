@@ -1,7 +1,19 @@
 import { useState, useEffect } from "react";
 
-export default function RecipeSearch() {
-  const [search, setSearch] = useState("");
+const url = "https://www.themealdb.com/api/json/v1/1/search.php";
+const apiKey = "d182b662568a43cfbb3b35fb0f3a41ca";
+
+export default function RecipeSearch({ setFoodData }) {
+  const [search, setSearch] = useState("Chicken");
+
+  useEffect(() => {
+    const fetchFood = async () => {
+      const res = await fetch(`${url}?s=${search}`);
+      const data = await res.json();
+      setFoodData(data.meals || []);
+    };
+    fetchFood();
+  }, [search]);
 
   return (
     <>
